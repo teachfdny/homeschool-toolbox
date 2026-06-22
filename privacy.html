@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Notice — A Tale of Changes</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF9F5;
+    --ink:#2E3A4A;
+    --ink-soft:#8B95A1;
+    --teal:#2E8C82;
+    --teal-tint:#DCEEEB;
+    --rule: rgba(46,58,74,0.12);
+    --radius: 20px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--teal); }
+  a:hover{ opacity: 0.8; }
+
+  .wrap{ max-width: 860px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Header ---------- */
+  header{ padding: 26px 0 0; }
+  .header-row{
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 12px;
+    border-bottom: 2px dashed var(--rule);
+    padding-bottom: 18px;
+  }
+  .wordmark{
+    text-decoration: none; color: var(--ink);
+    display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+  }
+  .wordmark-serif{ font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.15rem; }
+  .wordmark-divider{ color: var(--rule); font-size: 1.1rem; }
+  .wordmark-script{ font-family: 'Caveat', cursive; font-weight: 600; font-size: 1.4rem; color: var(--teal); }
+  .header-links{ font-size: 0.85rem; display: flex; gap: 20px; align-items: center; }
+  .header-links a{ text-decoration: none; color: var(--ink-soft); }
+  .header-links a:hover{ color: var(--ink); }
+
+  /* ---------- Policy content ---------- */
+  .policy-wrap{
+    padding: 48px 0 64px;
+  }
+
+  /* Override Termly's Arial/generic fonts with our stack */
+  .policy-wrap [data-custom-class='body'],
+  .policy-wrap [data-custom-class='body'] *{
+    font-family: 'Nunito Sans', sans-serif !important;
+    background: transparent !important;
+  }
+  .policy-wrap [data-custom-class='title'],
+  .policy-wrap [data-custom-class='title'] *{
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2rem !important;
+    color: var(--ink) !important;
+    line-height: 1.2 !important;
+  }
+  .policy-wrap [data-custom-class='title'] h1{
+    font-size: 2rem !important;
+    margin: 0 0 8px !important;
+  }
+  .policy-wrap [data-custom-class='subtitle'],
+  .policy-wrap [data-custom-class='subtitle'] *{
+    font-family: 'Nunito Sans', sans-serif !important;
+    color: var(--ink-soft) !important;
+    font-size: 0.9rem !important;
+  }
+  .policy-wrap [data-custom-class='heading_1'],
+  .policy-wrap [data-custom-class='heading_1'] *{
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.3rem !important;
+    color: var(--ink) !important;
+  }
+  .policy-wrap [data-custom-class='heading_1'] h2{
+    font-size: 1.3rem !important;
+    margin: 32px 0 8px !important;
+    border-top: 2px dashed var(--rule);
+    padding-top: 24px;
+  }
+  .policy-wrap [data-custom-class='heading_2'],
+  .policy-wrap [data-custom-class='heading_2'] *{
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    color: var(--ink) !important;
+  }
+  .policy-wrap [data-custom-class='heading_2'] h3{
+    font-size: 1rem !important;
+    margin: 20px 0 6px !important;
+  }
+  .policy-wrap [data-custom-class='body_text'],
+  .policy-wrap [data-custom-class='body_text'] *{
+    color: var(--ink-soft) !important;
+    font-size: 0.95rem !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+  }
+  .policy-wrap [data-custom-class='link'],
+  .policy-wrap [data-custom-class='link'] *{
+    color: var(--teal) !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Table styling */
+  .policy-wrap table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
+    margin: 16px 0;
+  }
+  .policy-wrap table td,
+  .policy-wrap table th{
+    padding: 8px 12px;
+    color: var(--ink-soft);
+  }
+
+  /* Hide Termly logo */
+  .policy-wrap > span:first-child{ display: none !important; }
+
+  /* Hide "powered by Termly" footer line */
+  .policy-wrap > br + div{ display: none; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top: 2px dashed var(--rule);
+    padding: 26px 0 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    font-size: 0.85rem; color: var(--ink-soft);
+  }
+  footer a{ color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  footer a:hover{ color: var(--ink); border-bottom-color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="header-row">
+      <a class="wordmark" href="https://toolbox.ataleofchanges.com">
+        <span class="wordmark-serif">A Tale of Changes</span>
+        <span class="wordmark-divider">·</span>
+        <span class="wordmark-script">The Homeschool Toolbox</span>
+      </a>
+      <nav class="header-links">
+        <a href="https://toolbox.ataleofchanges.com">Back to the Toolbox</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="policy-wrap">
+    <!-- PASTE TERMLY HTML CONTENT BELOW THIS LINE -->
+<style>
+  [data-custom-class='body'], [data-custom-class='body'] * {
+          background: transparent !important;
+        }
+[data-custom-class='title'], [data-custom-class='title'] * {
+          font-family: Arial !important;
+font-size: 26px !important;
+color: #000000 !important;
+        }
+[data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
+          font-family: Arial !important;
+color: #595959 !important;
+font-size: 14px !important;
+        }
+[data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
+          font-family: Arial !important;
+font-size: 19px !important;
+color: #000000 !important;
+        }
+[data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
+          font-family: Arial !important;
+font-size: 17px !important;
+color: #000000 !important;
+        }
+[data-custom-class='body_text'], [data-custom-class='body_text'] * {
+          color: #595959 !important;
+font-size: 14px !important;
+font-family: Arial !important;
+        }
+[data-custom-class='link'], [data-custom-class='link'] * {
+          color: #3030F1 !important;
+font-size: 14px !important;
+font-family: Arial !important;
+word-break: break-word !important;
+        }
+</style>
+
+      <div data-custom-class="body">
+      <div><strong><span style="font-size: 26px;"><span data-custom-class="title"><bdt class="block-component"></bdt><bdt class="question"><h1>PRIVACY NOTICE</h1></bdt><bdt class="statement-end-if-in-editor"></bdt></span></span></strong></div><div><span style="color: rgb(127, 127, 127);"><strong><span style="font-size: 15px;"><span data-custom-class="subtitle">Last updated <bdt class="question">June 22, 2026</bdt></span></span></strong></span></div><div><br></div><div><br></div><div><br></div><div style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text">This Privacy Notice for <bdt class="question noTranslate">A Tale of Changes</bdt><bdt class="block-component"></bdt></bdt> (<bdt class="block-component"></bdt>"<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"<bdt class="statement-end-if-in-editor"></bdt></span><span data-custom-class="body_text">), describes how and why we might access, collect, store, use, and/or share (<bdt class="block-component"></bdt>"<strong>process</strong>"<bdt class="statement-end-if-in-editor"></bdt>) your personal information when you use our services (<bdt class="block-component"></bdt>"<strong>Services</strong>"<bdt class="statement-end-if-in-editor"></bdt>), including when you:</span></span></span><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><bdt class="block-component"></bdt></span></span></span></span></span></div><ul><li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">Visit our website at <a target="_blank" data-custom-class="link" href="https://toolbox.ataleofchanges.com">https://toolbox.ataleofchanges.com</a> or any website of ours that links to this Privacy Notice</span></span></li></ul><ul><li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">Download and use our mobile application (The Record Keeper), or any other application of ours that links to this Privacy Notice</span></span></li></ul><ul><li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">Engage with us in other related ways, including any marketing or events</span></span></li></ul><div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a target="_blank" data-custom-class="link" href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>.</span></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>SUMMARY OF KEY POINTS</h2></span></strong></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong><em>This summary provides key points from our Privacy Notice. You can find more details by using our <a data-custom-class="link" href="#toc">table of contents</a> below.</em></strong></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>What personal information do we process?</strong> When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us. Learn more about <a data-custom-class="link" href="#personalinfo">personal information you disclose to us</a>.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>Do we process any sensitive personal information?</strong> We do not process sensitive information.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>Do we collect any information from third parties?</strong> We do not collect any information from third parties.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>How do we process your information?</strong> We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. Learn more about <a data-custom-class="link" href="#infouse">how we process your information</a>.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>How do we keep your information safe?</strong> We have organizational and technical processes in place to protect your personal information. However, no electronic transmission over the internet can be guaranteed to be 100% secure. Learn more about <a data-custom-class="link" href="#infosafe">how we keep your information safe</a>.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>What are your rights?</strong> Depending on where you are located, you may have certain rights regarding your personal information. Learn more about <a data-custom-class="link" href="#privacyrights">your privacy rights</a>.</span></div><div style="line-height: 1.5;"><br></div><div id="toc" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>TABLE OF CONTENTS</h2></span></strong></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#infocollect">1. WHAT INFORMATION DO WE COLLECT?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#infouse">2. HOW DO WE PROCESS YOUR INFORMATION?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#legalbases">3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#whoshare">4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#cookies">5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#inforetain">6. HOW LONG DO WE KEEP YOUR INFORMATION?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#infosafe">7. HOW DO WE KEEP YOUR INFORMATION SAFE?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#infominors">8. DO WE COLLECT INFORMATION FROM MINORS?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#privacyrights">9. WHAT ARE YOUR PRIVACY RIGHTS?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#DNT">10. CONTROLS FOR DO-NOT-TRACK FEATURES</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#uslaws">11. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#policyupdates">12. DO WE MAKE UPDATES TO THIS NOTICE?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#contact">13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></div><div style="line-height: 1.5;"><a data-custom-class="link" href="#request">14. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a></div><div style="line-height: 1.5;"><br></div>
+
+<div id="infocollect" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>1. WHAT INFORMATION DO WE COLLECT?</h2></span></strong><span data-custom-class="heading_2" id="personalinfo"><strong><h3>Personal information you disclose to us</h3></strong></span><span data-custom-class="body_text"><em>We collect personal information that you provide to us.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We collect personal information that you voluntarily provide to us when you register on the Services, express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>Personal Information Provided by You.</strong> The personal information we collect may include: names, email addresses, usernames, passwords, and billing addresses.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>Sensitive Information.</strong> We do not process sensitive information.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>Payment Data.</strong> We may collect data necessary to process your payment if you choose to make purchases. All payment data is handled and stored by <a target="_blank" data-custom-class="link" href="https://stripe.com/privacy">Stripe</a>. We never see or store your card details.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>Application Data.</strong> If you use our application(s), we also collect device information (such as your mobile device ID, model, manufacturer), operating system, version information, browser type, and Internet Protocol (IP) address. This information is primarily needed to maintain the security and operation of our application(s).</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="heading_2"><strong><h3>Information automatically collected</h3></strong></span><span data-custom-class="body_text"><em>Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Services.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We automatically collect certain information when you visit, use, or navigate the Services. This may include your IP address, browser and device characteristics, operating system, language preferences, referring URLs, and information about how and when you use our Services.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">Like many businesses, we also collect information through cookies and similar technologies.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="heading_2"><strong><h3>Google API</h3></strong></span><span data-custom-class="body_text">Our use of information received from Google APIs will adhere to the <a data-custom-class="link" href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener noreferrer" target="_blank">Google API Services User Data Policy</a>, including the <a data-custom-class="link" href="https://developers.google.com/terms/api-services-user-data-policy#limited-use" rel="noopener noreferrer" target="_blank">Limited Use requirements</a>.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="infouse" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>2. HOW DO WE PROCESS YOUR INFORMATION?</h2></span></strong><span data-custom-class="body_text"><em>We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We process your personal information for the following reasons:</span></div><ul><li data-custom-class="body_text" style="line-height: 1.5;">To facilitate account creation and authentication and manage user accounts</li><li data-custom-class="body_text" style="line-height: 1.5;">To deliver and facilitate delivery of services to the user</li><li data-custom-class="body_text" style="line-height: 1.5;">To respond to user inquiries and offer support</li><li data-custom-class="body_text" style="line-height: 1.5;">To send administrative information to you</li><li data-custom-class="body_text" style="line-height: 1.5;">To fulfill and manage your orders and subscriptions</li><li data-custom-class="body_text" style="line-height: 1.5;">To request feedback</li><li data-custom-class="body_text" style="line-height: 1.5;">To send you marketing and promotional communications (you may opt out at any time)</li><li data-custom-class="body_text" style="line-height: 1.5;">To protect our Services from fraud and abuse</li><li data-custom-class="body_text" style="line-height: 1.5;">To evaluate and improve our Services, products, and user experience</li><li data-custom-class="body_text" style="line-height: 1.5;">To identify usage trends</li><li data-custom-class="body_text" style="line-height: 1.5;">To comply with our legal obligations</li></ul><div style="line-height: 1.5;"><br></div>
+
+<div id="legalbases" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?</h2></span></strong><span data-custom-class="body_text"><em>We only process your personal information when we believe it is necessary and we have a valid legal reason to do so.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong><u>If you are located in Canada:</u></strong> We may process your information if you have given us specific permission (express consent) to use your personal information for a specific purpose, or in situations where your permission can be inferred (implied consent). You can withdraw your consent at any time by contacting us.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="whoshare" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</h2></span></strong><span data-custom-class="body_text"><em>We may share information in specific situations and with the following third parties.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We may share your data with third-party vendors and service providers who perform services for us. These include:</span></div><ul><li data-custom-class="body_text" style="line-height: 1.5;"><strong>Stripe</strong> — payment processing</li><li data-custom-class="body_text" style="line-height: 1.5;"><strong>Google Firebase (Cloud Firestore)</strong> — app infrastructure and data storage</li><li data-custom-class="body_text" style="line-height: 1.5;"><strong>MailerLite</strong> — email marketing and waitlist management</li><li data-custom-class="body_text" style="line-height: 1.5;"><strong>Mailchimp</strong> — blog newsletter</li><li data-custom-class="body_text" style="line-height: 1.5;"><strong>Netlify</strong> — hosting for the toolbox landing page and tools</li><li data-custom-class="body_text" style="line-height: 1.5;"><strong>Cloudflare</strong> — DNS and traffic routing</li><li data-custom-class="body_text" style="line-height: 1.5;"><strong>Bluehost</strong> — hosting for the WordPress blog</li></ul><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We may also share your personal information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="cookies" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</h2></span></strong><span data-custom-class="body_text"><em>We may use cookies and other tracking technologies to collect and store your information.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We may use cookies and similar tracking technologies (like web beacons) to gather information when you interact with our Services. These help us maintain the security of our Services and your account, prevent crashes, fix bugs, save your preferences, and assist with basic site functions.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We may share your information with Google Analytics to track and analyze the use of the Services. To opt out of being tracked by Google Analytics, visit <a data-custom-class="link" href="https://tools.google.com/dlpage/gaoptout" rel="noopener noreferrer" target="_blank">https://tools.google.com/dlpage/gaoptout</a>.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="inforetain" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>6. HOW LONG DO WE KEEP YOUR INFORMATION?</h2></span></strong><span data-custom-class="body_text"><em>We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice unless otherwise required by law.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice. No purpose in this notice will require us keeping your personal information for longer than the period of time in which users have an account with us.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="infosafe" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>7. HOW DO WE KEEP YOUR INFORMATION SAFE?</h2></span></strong><span data-custom-class="body_text"><em>We aim to protect your personal information through a system of organizational and technical security measures.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards, no electronic transmission over the Internet can be guaranteed to be 100% secure. You should only access the Services within a secure environment.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="infominors" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>8. DO WE COLLECT INFORMATION FROM MINORS?</h2></span></strong><span data-custom-class="body_text"><em>We do not knowingly collect data from or market to children under 18 years of age.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We do not knowingly collect, solicit data from, or market to children under 18 years of age. By using the Services, you represent that you are at least 18 or that you are the parent or guardian of a minor and consent to such minor's use of the Services. If we learn that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable measures to delete such data. If you become aware of any data we may have collected from children under age 18, please contact us at <a target="_blank" data-custom-class="link" href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="privacyrights" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>9. WHAT ARE YOUR PRIVACY RIGHTS?</h2></span></strong><span data-custom-class="body_text"><em>Depending on your state of residence in the US or in some regions such as Canada, you have rights that allow you greater access to and control over your personal information.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">In some regions (like Canada), you have certain rights under applicable data protection laws. These may include the right to request access to your personal information, request rectification or erasure, restrict the processing of your personal information, and data portability.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong><u>Withdrawing your consent:</u></strong> You can withdraw your consent at any time by contacting us using the contact details in this notice.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong><u>Opting out of marketing communications:</u></strong> You can unsubscribe from our marketing communications at any time by clicking the unsubscribe link in any email we send, or by contacting us directly.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">If you would like to review, change, or terminate your account, or if you have questions about your privacy rights, contact us at <a target="_blank" data-custom-class="link" href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="DNT" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>10. CONTROLS FOR DO-NOT-TRACK FEATURES</h2></span></strong><span data-custom-class="body_text">Most web browsers and some mobile operating systems include a Do-Not-Track ("DNT") feature. We do not currently respond to DNT browser signals as no uniform technology standard for recognizing and implementing DNT signals has been finalized. If a standard is adopted in the future, we will inform you in a revised version of this notice.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="uslaws" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>11. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</h2></span></strong><span data-custom-class="body_text"><em>If you are a resident of California, Colorado, Connecticut, or other applicable states, you may have the right to request access to, correct, or delete the personal information we maintain about you.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">The personal information we have collected in the past twelve months includes: identifiers (name, email, IP address, username) and personal information as defined in the California Customer Records statute (name, contact information). We do not sell or share personal information to third parties for commercial purposes.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">To exercise your rights, you can contact us by emailing <a target="_blank" data-custom-class="link" href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>. We will consider and act upon any request in accordance with applicable data protection laws.</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text"><strong>California "Shine The Light" Law:</strong> California Civil Code Section 1798.83 permits California residents to request information about categories of personal information we disclosed to third parties for direct marketing purposes. To make such a request, contact us using the details below.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="policyupdates" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>12. DO WE MAKE UPDATES TO THIS NOTICE?</h2></span></strong><span data-custom-class="body_text"><em>Yes, we will update this notice as necessary to stay compliant with relevant laws.</em></span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">We may update this Privacy Notice from time to time. The updated version will be indicated by an updated date at the top of this Privacy Notice. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="contact" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2></span></strong><span data-custom-class="body_text">If you have questions or comments about this notice, you may email us at <a target="_blank" data-custom-class="link" href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a> or contact us by post at:</span></div><div style="line-height: 1.5;"><br></div><div style="line-height: 1.5;"><span data-custom-class="body_text">A Tale of Changes<br>950 Fulton St, PO Box 381042<br>Brooklyn, NY 11238<br>United States</span></div><div style="line-height: 1.5;"><br></div>
+
+<div id="request" style="line-height: 1.5;"><strong><span data-custom-class="heading_1"><h2>14. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h2></span></strong><span data-custom-class="body_text">Based on the applicable laws of your country or state of residence, you may have the right to request access to the personal information we collect from you, correct inaccuracies, or delete your personal information. To request to review, update, or delete your personal information, please email us at <a target="_blank" data-custom-class="link" href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>.</span></div>
+
+      </div>
+    <!-- END TERMLY CONTENT -->
+  </div>
+
+  <footer>
+    <span>© 2026 A Tale of Changes</span>
+    <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
