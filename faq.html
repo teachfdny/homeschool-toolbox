@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — The Record Keeper · A Tale of Changes</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF9F5;
+    --ink:#2E3A4A;
+    --ink-soft:#8B95A1;
+    --teal:#2E8C82;
+    --teal-tint:#DCEEEB;
+    --blush:#E7A9AC;
+    --blush-tint:#FBEAEA;
+    --lavender:#8B5CF6;
+    --lavender-tint:#F3EDFB;
+    --rule: rgba(46,58,74,0.12);
+    --radius: 20px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--teal); text-decoration: underline; text-decoration-color: var(--teal-tint); text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  a:hover{ text-decoration-color: var(--teal); }
+
+  .wrap{ max-width: 860px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Header ---------- */
+  header{ padding: 26px 0 0; }
+  .header-row{
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 12px;
+    border-bottom: 2px dashed var(--rule);
+    padding-bottom: 18px;
+  }
+  .wordmark{
+    text-decoration: none; color: var(--ink);
+    display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+  }
+  .wordmark-serif{ font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.15rem; }
+  .wordmark-divider{ color: var(--rule); font-size: 1.1rem; }
+  .wordmark-script{ font-family: 'Caveat', cursive; font-weight: 600; font-size: 1.4rem; color: var(--teal); }
+  .header-links{ font-size: 0.85rem; display: flex; gap: 20px; align-items: center; }
+  .header-links a{ text-decoration: none; color: var(--ink-soft); }
+  .header-links a:hover{ color: var(--ink); }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding: 52px 0 40px; }
+  .hero-eyebrow{
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--lavender);
+    margin: 0 0 8px;
+    display: inline-block;
+  }
+  .hero h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.18;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .hero p{ max-width: 52ch; font-size: 1.05rem; color: var(--ink-soft); margin: 0; }
+
+  /* ---------- FAQ items ---------- */
+  .faq-list{
+    padding: 48px 0 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item{
+    border-top: 2px dashed var(--rule);
+    padding: 28px 0;
+  }
+  .faq-item:last-child{
+    border-bottom: 2px dashed var(--rule);
+  }
+
+  .faq-q{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--ink);
+    margin: 0 0 14px;
+    line-height: 1.3;
+  }
+
+  .faq-a{
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .faq-a p{ margin: 0 0 12px; }
+  .faq-a p:last-child{ margin-bottom: 0; }
+
+  .faq-a ul{
+    margin: 10px 0 12px 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .faq-a ul li{ color: var(--ink-soft); font-size: 0.98rem; }
+
+  .faq-a .example{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 10px 0;
+    font-size: 0.94rem;
+  }
+  .faq-a .example span{ display: block; }
+  .faq-a .example .yes{ color: var(--teal); }
+  .faq-a .example .no{ color: var(--blush); text-decoration: line-through; text-decoration-color: var(--blush); }
+
+  .faq-a strong{ color: var(--ink); font-weight: 700; }
+
+  /* ---------- Still have questions ---------- */
+  .still-questions{
+    margin-bottom: 56px;
+    background: var(--lavender-tint);
+    border: 2px dashed var(--lavender);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+  }
+  .still-questions h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600; font-size: 1.3rem;
+    margin: 0 0 8px; color: var(--ink);
+  }
+  .still-questions p{ margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+  .still-questions a{ color: var(--lavender); }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top: 2px dashed var(--rule);
+    padding: 26px 0 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    font-size: 0.85rem; color: var(--ink-soft);
+  }
+  footer a{ color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  footer a:hover{ color: var(--ink); border-bottom-color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="header-row">
+      <a class="wordmark" href="https://toolbox.ataleofchanges.com">
+        <span class="wordmark-serif">A Tale of Changes</span>
+        <span class="wordmark-divider">·</span>
+        <span class="wordmark-script">The Homeschool Toolbox</span>
+      </a>
+      <nav class="header-links">
+        <a href="https://toolbox.ataleofchanges.com">Back to the Toolbox</a>
+        <a href="https://keeper.ataleofchanges.com" target="_blank" rel="noopener">Open the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="hero-eyebrow">The Record Keeper</p>
+    <h1>Frequently asked questions</h1>
+    <p>Common questions about The Record Keeper. If something isn't covered here, email us at <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>.</p>
+  </section>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <h2 class="faq-q">I just signed up and I'm already seeing "Your Wrapped is ready" — is that normal?</h2>
+      <div class="faq-a">
+        <p>Yes! If your school year starts in August, July is technically your year-end month — so you're getting a sneak peek of one of The Record Keeper's most exciting features right from the start. Your Wrapped is a shareable year-end graphic that captures everything you accomplished.</p>
+        <p>You don't need to do anything with it now — just add your subjects and start logging. It'll be a lot more fun to generate once you have a full year of data behind it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h2 class="faq-q">My curriculum doesn't have numbered lessons. How do I fill in "total lessons"?</h2>
+      <div class="faq-a">
+        <p>You don't need an official lesson-numbering system to use this field. Use whatever stopping points make sense for your curriculum:</p>
+        <ul>
+          <li>Count chapters in your table of contents and use that as your "lessons" total</li>
+          <li>Decide how much you plan to cover per session, estimate how many sessions it'll take to finish, and use that number</li>
+          <li>Treat each unit or section break as one "lesson"</li>
+        </ul>
+        <p>The field is just a way to track progress toward a total you define — it doesn't need to match a textbook's official lesson count.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h2 class="faq-q">Can I log lessons daily as I complete them?</h2>
+      <div class="faq-a">
+        <p>The Record Keeper is designed for end-of-week logging, not daily tracking — and that's intentional. Just like many homeschool families plan at the start of the week, the habit here is to log at the end of it. Once a week, you record your totals: how many lessons you completed, hours spent, and a few notes on what you covered. That's it.</p>
+        <p>This keeps logging from becoming another daily task on your list. Five minutes at the end of the week gives you an accurate picture of what actually happened — which is exactly what you need for meaningful records.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h2 class="faq-q">How much detail should I put in the notes field?</h2>
+      <div class="faq-a">
+        <p>Keep it short — think keywords, not sentences. The notes field is a memory jogger, not a journal. A few words that capture what you covered is all you need.</p>
+        <div class="example">
+          <span class="yes">✓ Dividing fractions, order of operations</span>
+          <span class="yes">✓ Acids vs. bases, animal classification</span>
+          <span class="yes">✓ Terracotta Army, westward expansion</span>
+          <span class="yes">✓ Homophones, compound sentences</span>
+        </div>
+        <p>If you can read it back in six months and remember what happened that week, it's done its job. The goal is a quick, consistent log — not a detailed record of every moment.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h2 class="faq-q">How do I cancel my subscription?</h2>
+      <div class="faq-a">
+        <p>You can cancel anytime directly in the app — go to <strong>Settings → Manage Subscription</strong> and follow the steps there.</p>
+        <p>If you're within 30 days of your purchase and would like a refund, email us at <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>. Annual plans come with a <strong>30-day money-back guarantee</strong> — no questions asked.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="still-questions">
+    <h2>Still have questions?</h2>
+    <p>Email us at <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a> and we'll get back to you as soon as we can.</p>
+  </div>
+
+  <footer>
+    <span>© 2026 A Tale of Changes</span>
+    <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+      <a href="https://toolbox.ataleofchanges.com/pricing">Pricing</a>
+      <a href="https://toolbox.ataleofchanges.com/privacy">Privacy Policy</a>
+      <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
