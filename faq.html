@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ — The Record Keeper · A Tale of Changes</title>
+<title>FAQ — The Homeschool Toolbox · A Tale of Changes</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,9 +79,40 @@
   }
   .hero p{ max-width: 52ch; font-size: 1.05rem; color: var(--ink-soft); margin: 0; }
 
+  /* ---------- Jump links ---------- */
+  .jump-links{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 0 0 48px;
+  }
+  .jump-links a{
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--teal);
+    text-decoration: none;
+    border: 2px dashed var(--teal-tint);
+    border-radius: 20px;
+    padding: 6px 16px;
+  }
+  .jump-links a:hover{
+    border-color: var(--teal);
+  }
+
+  /* ---------- FAQ section header ---------- */
+  .faq-section-header{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin: 0;
+    padding: 32px 0 20px;
+    border-top: 2px dashed var(--rule);
+  }
+
   /* ---------- FAQ items ---------- */
   .faq-list{
-    padding: 48px 0 64px;
+    padding: 0 0 64px;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -183,12 +214,19 @@
   </header>
 
   <section class="hero">
-    <p class="hero-eyebrow">The Record Keeper</p>
+    <p class="hero-eyebrow">The Homeschool Toolbox</p>
     <h1>Frequently asked questions</h1>
-    <p>Common questions about The Record Keeper. If something isn't covered here, email us at <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>.</p>
+    <p>Common questions about our tools. If something isn't covered here, email us at <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>.</p>
   </section>
 
+  <nav class="jump-links">
+    <a href="#record-keeper">The Record Keeper</a>
+    <a href="#cloud-transcript">Cloud Transcript Generator</a>
+  </nav>
+
   <div class="faq-list">
+
+    <h2 class="faq-section-header" id="record-keeper">The Record Keeper</h2>
 
     <div class="faq-item">
       <h2 class="faq-q">I just signed up and I'm already seeing "Your Wrapped is ready" — is that normal?</h2>
@@ -238,6 +276,29 @@
       <div class="faq-a">
         <p>You can cancel anytime directly in the app — go to <strong>Settings → Manage Subscription</strong> and follow the steps there.</p>
         <p>If you're within 30 days of your purchase and would like a refund, email us at <a href="mailto:ataleofchanges@gmail.com">ataleofchanges@gmail.com</a>. Annual plans come with a <strong>30-day money-back guarantee</strong> — no questions asked.</p>
+      </div>
+    </div>
+
+    <h2 class="faq-section-header" id="cloud-transcript">Cloud Transcript Generator</h2>
+
+    <div class="faq-item">
+      <h2 class="faq-q">How do I transfer my data from the free Transcript Generator to the Cloud Transcript Generator?</h2>
+      <div class="faq-a">
+        <p>Export your data as a JSON file from the free Transcript Generator, then import it into the Cloud Transcript Generator. Your courses, grades, and settings will carry over automatically.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h2 class="faq-q">How does the course description builder work?</h2>
+      <div class="faq-a">
+        <p>Add your courses in the generator and they automatically get added to the builder.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h2 class="faq-q">When should I do my course descriptions?</h2>
+      <div class="faq-a">
+        <p>Ideally after your high schooler has completed a course. Curriculum changes happen, so don't spend time writing descriptions for courses you haven't finished.</p>
       </div>
     </div>
 
